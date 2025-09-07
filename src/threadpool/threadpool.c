@@ -49,6 +49,9 @@
 #	ifndef PIDFD_NONBLOCK
 #		define PIDFD_NONBLOCK	O_NONBLOCK
 #	endif
+#	ifndef SYS_pidfd_open
+#		define SYS_pidfd_open 434 /* For Linux below 5.3 */
+#	endif
 #endif /* Linux specific code. */
 
 #include <sys/queue.h>
